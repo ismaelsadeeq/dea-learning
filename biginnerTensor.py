@@ -26,3 +26,40 @@ tensor3 = tf.reshape(tensor2,[3,-1])
 print(tensor1)
 print(tensor2)
 print(tensor3)
+
+#slicing tensors
+matrix = [
+          [6,7,8,9,10],
+          [11,12,13,14,15],
+          [16,17,18,19,20]
+]
+
+tensor4 = tf.Variable(matrix,dtype=tf.int32)
+print(tf.rank(tensor4))
+print(tensor4.shape)
+
+#slicing
+three = tensor4[0,2]
+print("three is ",three)
+
+
+row1 = tensor4[0]  # selects the first row
+print(row1)
+
+column1 = tensor4[:, 0]  # selects the first column
+print(column1)
+
+row_2_and_4 = tensor4[1::2]  # selects second and fourth row
+print("second and fourth row ",row_2_and_4)
+
+column_1_in_row_2_and_3 = tensor4[1:3,0]
+print(column_1_in_row_2_and_3)
+
+fives = tf.zeros([5,5,5,5])
+
+# print(fives)
+
+secondFives = tf.reshape(fives,[125,-1])
+
+print(secondFives)
+
