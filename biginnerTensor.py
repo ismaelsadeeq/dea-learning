@@ -43,13 +43,13 @@ three = tensor4[0,2]
 print("three is ",three)
 
 
-row1 = tensor4[0]  # selects the first row
+row1 = tensor4[0]  #selects the first row
 print(row1)
 
-column1 = tensor4[:, 0]  # selects the first column
+column1 = tensor4[:, 0]  #selects the first column
 print(column1)
 
-row_2_and_4 = tensor4[1::2]  # selects second and fourth row
+row_2_and_4 = tensor4[1::2]  #selects second and fourth row
 print("second and fourth row ",row_2_and_4)
 
 column_1_in_row_2_and_3 = tensor4[1:3,0]
